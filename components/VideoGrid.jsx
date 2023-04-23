@@ -3,15 +3,15 @@ import React, { useState, useEffect } from 'react';
 import YouTubeVideo from "./YouTubeVideo";
 
 const GridWrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: 10px;
-    justify-items: center;
-    padding: 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 `;
 
-const StyledTitle = styled.h3`
+const StyledTitle = styled.div`
     text-align: center;
+    padding: 10px;
 `;
 
 const VideoGrid = ({apiKey, channelId, title, playlistIds}) => {
@@ -31,7 +31,6 @@ const VideoGrid = ({apiKey, channelId, title, playlistIds}) => {
     console.log(playlistIds);
     if (youTubeData || playlistIds) {
         const videoIds = youTubeData ? youTubeData.map((video) => video.id.videoId) : playlistIds;
-        console.log(videoIds);
         return (
             <>
                 <StyledTitle>
