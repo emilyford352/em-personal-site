@@ -35,7 +35,7 @@ const ContentWrapper = styled.div``;
 const PageWrapper = ({children}) => {
     const buttons = [
         {title: 'Code Emily', route: '/code-emily'},
-        {title: 'Mame and Mom Pod', route: '/mame-and-mom-pod'},
+        {title: 'Mame & Mom Pod', route: '/mame-and-mom-pod'},
         {title: 'Comedy', route: '/comedy'}
     ];
 

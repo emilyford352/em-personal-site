@@ -8,8 +8,11 @@ const StyledParagraph = styled.div`
         padding: 20px;
         font-size: 16px;
     }
+    @media only screen and (min-width: 650px) {
+        padding: 10px 50px;
+    }
     @media only screen and (min-width: 1000px) {
-        padding: 20px 100px 0px;
+        padding: 10px 120px;
     }
 `
 

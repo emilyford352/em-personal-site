@@ -24,8 +24,8 @@ export default function CodeEmily() {
                     </div>
                     <NewEpisodesBanner>New episodes every Monday!</NewEpisodesBanner>
                 </Paragraph>
-                <VideoGrid playlistIds={playlistIds} title="Playlists:" />
                 <VideoGrid apiKey="AIzaSyDo1BN3bNrIFQholKinqN6x1j9_xwQvhQI" channelId="UCA8BgSxhyGyVkuxI3VP3Z7g" title="Recent Videos:" />
+                <VideoGrid playlistIds={playlistIds} title="Playlists:" />
             </PageWrapper>
         </div>
     )

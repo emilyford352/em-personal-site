@@ -14,28 +14,19 @@ const StyledButton = styled.button`
     cursor: pointer;
     outline: inherit;
     height: ${(props) => props.isHomePage ? '170' : '100'}px; 
-    width: ${(props) => props.isHomePage ? '450' : '160'}px;
+    width: 300px;
     font-size: ${(props) => props.isHomePage ? '50' : '18'}px;
     margin: ${(props) => props.isHomePage ? '30' : '10'}px;
     background-color: #${(props) => props.isSelected ? '1D9BF0' : 'ACE464'};
-    @media only screen and (min-width: 1400px) {
-        width: ${(props) => props.isHomePage ? '700' : '200'}px;
-    }
-    @media only screen and (max-width: 650px) {
-        width: ${(props) => props.isHomePage ? '450' : '130'}px;
-        height: ${(props) => props.isHomePage ? '170' : '80'}px; 
-        font-size: ${(props) => props.isHomePage ? '50' : '15'}px;
-    }
     :hover {
 		background-color: white;
 		color: purple;
 	}
 `;
 
-export default function RouteButton({title, route, isHomePage, isSelected}) {
-    const router = useRouter();
+export default function RouteButton({title, isHomePage, isSelected}) {
     return (
-        <StyledButton type="button" onClick={() => router.push(route)} isHomePage={isHomePage} isSelected={isSelected}>
+        <StyledButton type="button" isHomePage={isHomePage} isSelected={isSelected}>
             {title}
         </StyledButton>
     );
